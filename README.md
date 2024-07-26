@@ -1,7 +1,8 @@
 # GO-Client-Extractor
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/olenindenis/vault-extractor.svg)](https://pkg.go.dev/github.com/olenindenis/vault-extractor)
-![Build](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![Build](https://github.com/olenindenis/vault-extractor/actions/workflows/main.yml/badge.svg?branch=main)
+[![CodeFactor](https://www.codefactor.io/repository/github/creyd/prettier_action/badge/master)](https://www.codefactor.io/repository/github/creyd/prettier_action/overview/master)
 
 Go Client Extractor is a complete solution for efficient and fast import secrets from hashicorp vault server.
 
@@ -11,6 +12,9 @@ Go Client Extractor is a complete solution for efficient and fast import secrets
 go get -u github.com/olenindenis/vault-extractor
 ```
 
+## Examples
+
+### Getting Started
 
 1. To import envs as env file use:
 ```sh
@@ -38,4 +42,4 @@ or
 extractor env -conf=.env -file=.env.dev
 ```
 
-### If your -conf=.env and -file=.env equal than extractor will add new envs to old env file
+If your -conf=.env and -file=.env equal than extractor will add new envs to old env file
