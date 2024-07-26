@@ -1,7 +1,7 @@
 # GO-Client-Extractor
 
 [![Go Reference][go-reference-badge]][go-reference]
-[![Build][ci-build-badge]][ci-build]
+![Build](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
 
 Go Client Extractor is a complete solution for efficient and fast import secrets from hashicorp vault server.
 
