@@ -1,9 +1,8 @@
-module vault-extractor
+module github.com/olenindenis/vault-extractor
 
 go 1.22.0
 
 require (
-	github.com/hashicorp/go-envparse v0.1.0
 	github.com/hashicorp/vault-client-go v0.4.3
 	github.com/joho/godotenv v1.5.1
 	github.com/urfave/cli/v2 v2.27.3

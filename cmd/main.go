@@ -7,9 +7,9 @@ import (
 	"os"
 	"time"
 
-	"vault-extractor/internal/commands"
-	"vault-extractor/pkg/envs"
-	"vault-extractor/pkg/vault"
+	"github.com/olenindenis/vault-extractor/internal/commands"
+	"github.com/olenindenis/vault-extractor/pkg/envs"
+	"github.com/olenindenis/vault-extractor/pkg/vault"
 
 	"github.com/urfave/cli/v2"
 )

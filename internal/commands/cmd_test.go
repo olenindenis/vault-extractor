@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"vault-extractor/pkg/vault"
+	"github.com/olenindenis/vault-extractor/pkg/vault"
 )
 
 func TestMakeConfigFileForEnvType(t *testing.T) {
