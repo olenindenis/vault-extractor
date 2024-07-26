@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Go Reference](https://pkg.go.dev/badge/github.com/olenindenis/vault-extractor.svg)](https://pkg.go.dev/github.com/olenindenis/vault-extractor)
 ![Build](https://github.com/olenindenis/vault-extractor/actions/workflows/main.yml/badge.svg?branch=main)
+[![Go Report Card](https://goreportcard.com/badge/github.com/olenindenis/vault-extractor)](https://goreportcard.com/report/github.com/olenindenis/vault-extractor)
 
 Go Vault Extractor is a complete solution for efficient and fast import secrets from hashicorp vault server.
 
