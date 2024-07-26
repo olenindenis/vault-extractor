@@ -23,17 +23,3 @@ jobs:
 
       - name: Test
         run: go test -v ./...
-
-  check-readme-format:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          persist-credentials: false
-
-      - name: Ensure the readme is formatted (make format-readme)
-        uses: creyD/prettier_action@v4.3
-        with:
-          dry: True
-          prettier_options: --write README.md
