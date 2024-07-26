@@ -33,7 +33,7 @@ jobs:
           persist-credentials: false
 
       - name: Ensure the readme is formatted (make format-readme)
-        uses: creyD/prettier_action@v4
+        uses: creyD/prettier_action@v4.3
         with:
           dry: True
           prettier_options: --write README.md
