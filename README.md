@@ -1,5 +1,6 @@
 # GO-Client-Extractor
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Go Reference](https://pkg.go.dev/badge/github.com/olenindenis/vault-extractor.svg)](https://pkg.go.dev/github.com/olenindenis/vault-extractor)
 ![Build](https://github.com/olenindenis/vault-extractor/actions/workflows/main.yml/badge.svg?branch=main)
 

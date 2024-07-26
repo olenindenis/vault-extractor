@@ -24,11 +24,8 @@ func SaveAsEnvFile(_ context.Context, envName, fileName string, data map[string]
 		}
 		defer file.Close()
 
+		var key, val string
 		reader := bufio.NewReader(file)
-		var (
-			key string
-			val string
-		)
 		for {
 			line, _, err := reader.ReadLine()
 
