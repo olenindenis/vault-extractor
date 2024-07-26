@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/olenindenis/vault-extractor/internal/commands"
+	"github.com/olenindenis/vault-extractor/pkg/commands"
 	"github.com/olenindenis/vault-extractor/pkg/envs"
 	"github.com/olenindenis/vault-extractor/pkg/vault"
 

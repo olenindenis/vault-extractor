@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/olenindenis/vault-extractor/internal/converters"
+	"github.com/olenindenis/vault-extractor/pkg/converters"
 )
 
 type CmdMod string
