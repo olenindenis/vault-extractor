@@ -44,3 +44,5 @@ extractor env -conf=.env -file=.env.dev
 ```
 
 If your -conf=.env and -file=.env equal than extractor will add new envs to old env file
+
+To authenticate on vault you can use token or role-id/secret-id

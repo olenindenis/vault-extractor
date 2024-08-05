@@ -94,7 +94,7 @@ func run(mod commands.CmdMod, envName, fileName string) error {
 		return fmt.Errorf("run, loader Load, %w", err)
 	}
 
-	extractor, err := vault.NewClient(os.Getenv("VAULT_HOST"), os.Getenv("VAULT_TOKEN"))
+	extractor, err := vault.NewClient(ctx)
 	if err != nil {
 		return fmt.Errorf("run, vault NewClient, %w", err)
 	}

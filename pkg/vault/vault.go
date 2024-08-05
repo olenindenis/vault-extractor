@@ -3,26 +3,43 @@ package vault
 import (
 	"context"
 	"fmt"
+	"os"
 	"time"
 
 	"github.com/hashicorp/vault-client-go"
+	"github.com/hashicorp/vault-client-go/schema"
 )
 
 type Client struct {
 	client *vault.Client
 }
 
-func NewClient(host, token string) (*Client, error) {
+func NewClient(ctx context.Context) (*Client, error) {
 	client, err := vault.New(
-		vault.WithAddress(host),
+		vault.WithAddress(os.Getenv("VAULT_HOST")),
 		vault.WithRequestTimeout(10*time.Second),
 	)
 	if err != nil {
 		return nil, fmt.Errorf("extract, vault create New instance, %w", err)
 	}
 
+	token := os.Getenv("VAULT_TOKEN")
+	if token == "" {
+		resp, err := client.Auth.AppRoleLogin(
+			ctx,
+			schema.AppRoleLoginRequest{
+				RoleId:   os.Getenv("VAULT_APPROLE_ROLE_ID"),
+				SecretId: os.Getenv("VAULT_APPROLE_SECRET_ID"),
+			},
+		)
+		if err != nil {
+			return nil, fmt.Errorf("NewClient, vault client set AppRoleLogin, %w", err)
+		}
+		token = resp.Auth.ClientToken
+	}
+
 	if err = client.SetToken(token); err != nil {
-		return nil, fmt.Errorf("extract, vault client set token, %w", err)
+		return nil, fmt.Errorf("NewClient, vault client set token, %w", err)
 	}
 
 	return &Client{
